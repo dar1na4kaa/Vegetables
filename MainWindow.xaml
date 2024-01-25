@@ -1,0 +1,53 @@
+﻿<Window x:Class="Vegetables.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vegetables"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="900">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.ColumnSpan="4" x:Name="mainLabel">База данных овощей и фруктов</Label>
+        <StackPanel Grid.ColumnSpan="2" Grid.Row="1">
+            <Button Background="Green" Click="Connect_Click">Подключить</Button>
+            <RadioButton Checked="AllInfo_Checked">Отображение всей информации</RadioButton>
+            <RadioButton Checked="AllName_Checked">Отображение всех названий</RadioButton>
+            <RadioButton Checked="AllColors_Checked">Отображение всех цветов</RadioButton>
+            <RadioButton Checked="MaxCalories_Checked">Показать макс. калорийность</RadioButton>
+            <RadioButton Checked="MinCalories_Checked">Показать мин. калорийность</RadioButton>
+            <RadioButton Checked="AVGCalories_Checked">Показать среднюю калорийность</RadioButton>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1">
+            <Button Background="Red" Click="Disconnect_Click">Отключить</Button>
+            <RadioButton Checked="CountVegetable_Checked">Показать количество овощей</RadioButton>
+            <RadioButton Checked="CountFruits_Checked">Показать количество фруктов</RadioButton>
+            <RadioButton Checked="CountColors_Checked">Показать кол заданного цвета</RadioButton>
+            <TextBox x:Name="colorBox"></TextBox>
+            <RadioButton Checked="CountALLColors_Checked">Показать количество овощей фруктов каждого цвета</RadioButton>
+            <RadioButton Checked="AllLessCalories_Checked">Показать овощи и фрукты с кал. ниже указанной</RadioButton>
+            <TextBox x:Name="lessCalorBox"></TextBox>
+            <RadioButton Checked="AllMoreCalories_Checked">Показать овощи и фрукты с кал. выше указанной</RadioButton>
+            <TextBox x:Name="moreCalorBox"></TextBox>
+            <RadioButton Checked="AllDiapozon_Checked">Показать овощи и фрукты с кал. в указанном диапазоне</RadioButton>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock>от</TextBlock>
+                <TextBox Width="150" x:Name="startCalorBox"></TextBox>
+                <TextBlock >до</TextBlock>
+                <TextBox x:Name="endCalorBox" Width="150"></TextBox>
+            </StackPanel>
+            <RadioButton Checked="YeallowRedVegFr_Checked">Показать все, у кого цвет желтый или красный</RadioButton>
+        </StackPanel>
+        <TextBlock Grid.Row="2" Grid.ColumnSpan="4" Style="{StaticResource styleOut}" x:Name="outputText"></TextBlock>
+    </Grid>
+</Window>

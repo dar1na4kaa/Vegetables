@@ -1,0 +1,32 @@
+﻿<Application x:Class="Vegetables.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Vegetables"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="35"></Setter>
+            <Setter Property="Background" Value="MediumPurple"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+        <Style TargetType="RadioButton">
+            <Setter Property="FontSize" Value="15"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="GroupName" Value="RadioButtons"></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="10"></Setter>
+            <Setter Property="Margin" Value="10,0"></Setter>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="styleOut">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Background" Value="AliceBlue"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>
